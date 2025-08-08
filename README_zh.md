@@ -27,13 +27,13 @@
 目录结构如下所示：
 
 ```
-base/time/time_cangjie_api
+base/time/time_cangjie_wrapper
 ├── ohos             # 仓颉时间时区子系统接口实现
 ├── figures          # 存放readme中的架构图
 ```
 
 ## 相关仓
 
-time_cangjie_api
+time_cangjie_wrapper
 
 [time_service](https://gitee.com/openharmony/time_time_service)

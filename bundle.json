@@ -1,16 +1,16 @@
 {
-  "name": "@ohos/time_cangjie_api",
+  "name": "@ohos/time_cangjie_wrapper",
   "description": "Allowing apps to use OS time get/set functions",
   "version": "3.1",
   "license": "Apache License 2.0",
   "publishAs": "code-segment",
   "segment": {
-    "destPath": "base/time/time_cangjie_api"
+    "destPath": "base/time/time_cangjie_wrapper"
   },
   "dirs": {},
   "scripts": {},
   "component": {
-    "name": "time_cangjie_api",
+    "name": "time_cangjie_wrapper",
     "subsystem": "time",
     "syscap": [
       "SystemCapability.MiscServices.Time"
@@ -30,11 +30,11 @@
     },
     "build": {
       "sub_component": [
-          "//base/time/time_cangjie_api/ohos/system_date_time:ohos.system_date_time"
+          "//base/time/time_cangjie_wrapper/ohos/system_date_time:ohos.system_date_time"
       ],
       "inner_api": [
         {
-          "name": "//base/time/time_cangjie_api/ohos/system_date_time:ohos.system_date_time"
+          "name": "//base/time/time_cangjie_wrapper/ohos/system_date_time:ohos.system_date_time"
         }
       ],
       "test": [
