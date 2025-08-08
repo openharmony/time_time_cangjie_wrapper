@@ -27,13 +27,13 @@ The source code of the time and time zone subsystem is stored in the **/base/tim
 The directory structure is as follows:
 
 ```
-base/time/time_cangjie_api
+base/time/time_cangjie_wrapper
 ├── ohos             # Cangjie Time and Time Zone Subsystem code
 ├── figures          # architecture pictures
 ```
 
 ## Repositories Involved
 
-time_cangjie_api
+time_cangjie_wrapper
 
 [time_service](https://gitee.com/openharmony/time_time_service)
