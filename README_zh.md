@@ -1,4 +1,4 @@
-# 时间时区子系统
+# 时间时区仓颉
 
 ## 简介
 
@@ -15,20 +15,20 @@
 
 ## 系统架构
 
-**图 1**  时间时区子系统架构图
+**图 1**  时间时区仓颉架构图
 
 
-![](figures/时间时区子系统架构图.png "时间时区子系统架构图")
+![](figures/time_cangjie_wrapper_architecture.png "时间时区仓颉架构图")
 
 ## 目录
 
-时间时区子系统源代码在/base/time目录下。
+时间时区仓颉源代码在/base/time目录下。
 
 目录结构如下所示：
 
 ```
 base/time/time_cangjie_wrapper
-├── ohos             # 仓颉时间时区子系统接口实现
+├── ohos             # 仓颉时间时区接口实现
 ├── figures          # 存放readme中的架构图
 ```
 
