@@ -1,8 +1,8 @@
-# 时间时区仓颉
+# 时间时区仓颉接口
 
 ## 简介
 
- 时间时区为OpenHarmony系统提供了管理系统时间时区和定时的能力，包括：
+ 测试框架仓颉接口是在 OpenHarmony 上基于测试子系统能力之上封装的仓颉API。时间时区为OpenHarmony系统提供了管理系统时间时区和定时的能力，包括：
 
 -   **管理时间时区**
 
@@ -36,4 +36,4 @@ base/time/time_cangjie_wrapper
 
 time_cangjie_wrapper
 
-[time_service](https://gitee.com/openharmony/time_time_service)
+[time_service](https://gitee.com/openharmony/time_time_service/blob/master/README_zh.md)
