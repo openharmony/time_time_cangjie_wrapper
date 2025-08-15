@@ -1,7 +1,7 @@
 {
   "name": "@ohos/time_cangjie_wrapper",
   "description": "Allowing apps to use OS time get/set functions",
-  "version": "3.1",
+  "version": "6.0",
   "license": "Apache License 2.0",
   "publishAs": "code-segment",
   "segment": {
@@ -23,7 +23,7 @@
       "standard"
     ],
     "rom":"120KB",
-    "ram":"360KB",
+    "ram":"88KB",
     "deps": {
       "components": [
       ]
