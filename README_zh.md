@@ -17,7 +17,6 @@
 
 **图 1**  时间时区仓颉架构图
 
-
 ![](figures/time_cangjie_wrapper_architecture.png "时间时区仓颉架构图")
 
 ## 目录
