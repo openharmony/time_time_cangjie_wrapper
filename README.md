@@ -1,8 +1,8 @@
-# Time and Time Zone Subsystem
+# time_cangjie_wrapper
 
 ## Introduction
 
- The time and time zone subsystem provides OpenHarmony with the capability of managing the system time, time zone, and timing.
+ The time_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the time and time zone subsystem. The time and time zone subsystem provides OpenHarmony with the capability of managing the system time, time zone, and timing.
 
 -   **Time and time zone management**
 
@@ -15,10 +15,10 @@
 
 ## System Architecture
 
-**Figure 1** Architecture of the time and time zone subsystem
+**Figure 1** Architecture of the time_cangjie_wrapper
 
 
-![](figures/architecture-of-the-time-and-time-zone-subsystem.png "Architecture of the time and time zone subsystem")
+![](figures/time_cangjie_wrapper_architecture_en.png "Architecture of the time_cangjie_wrapper")
 
 ## Directory Structure
 
@@ -34,6 +34,4 @@ base/time/time_cangjie_wrapper
 
 ## Repositories Involved
 
-time_cangjie_wrapper
-
-[time_service](https://gitee.com/openharmony/time_time_service)
+[time_service](https://gitee.com/openharmony/time_time_service/blob/master/README.md)

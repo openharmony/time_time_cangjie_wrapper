@@ -33,6 +33,4 @@ base/time/time_cangjie_wrapper
 
 ## 相关仓
 
-time_cangjie_wrapper
-
 [time_service](https://gitee.com/openharmony/time_time_service/blob/master/README_zh.md)
