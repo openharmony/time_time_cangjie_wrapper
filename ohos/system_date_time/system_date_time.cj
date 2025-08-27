@@ -15,114 +15,79 @@
 
 package ohos.system_date_time
 
-import ohos.ffi.*
-import ohos.base.*
-import ohos.labels.*
+import ohos.ffi.{ RetCode, RetDataCString, RetDataI64 }
+import ohos.labels.APILevel
 
-foreign func FfiOHOSSysDateTimeSetTime(time: Int64): RetCode
+foreign {
+    func FfiOHOSSysDateTimeSetTime(time: Int64): RetCode
 
-foreign func FfiOHOSSysDateTimegetCurrentTime(isNano: Bool): RetDataI64
+    func FfiOHOSSysDateTimegetCurrentTime(isNano: Bool): RetDataI64
 
-foreign func FfiOHOSSysDateTimegetRealActiveTime(isNano: Bool): RetDataI64
+    func FfiOHOSSysDateTimegetRealActiveTime(isNano: Bool): RetDataI64
 
-foreign func FfiOHOSSysDateTimegetRealTime(isNano: Bool): RetDataI64
+    func FfiOHOSSysDateTimegetRealTime(isNano: Bool): RetDataI64
 
-foreign func FfiOHOSSysDateTimeGetTime(isNano: Bool): RetDataI64
+    func FfiOHOSSysDateTimeGetTime(isNano: Bool): RetDataI64
 
-foreign func FfiOHOSSysDateTimeGetUptime(timeType: Int32, isNano: Bool): RetDataI64
+    func FfiOHOSSysDateTimeGetUptime(timeType: Int32, isNano: Bool): RetDataI64
 
-foreign func FfiOHOSSysSetTimezone(Timezone: CString): RetCode
+    func FfiOHOSSysSetTimezone(Timezone: CString): RetCode
 
-foreign func FfiOHOSSysGetTimezone(): RetDataCString
+    func FfiOHOSSysGetTimezone(): RetDataCString
+}
 
+/**
+ * System time and timezone.
+ *
+ * @relation declare namespace systemDateTime
+ */
 @!APILevel[
     21,
-    crossplatform: true,
     stagemodelonly: true,
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public class SystemDateTime {
     /**
-     *  @brief getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void
+     * Obtains the number of timestamp that have elapsed since the Unix epoch.
+     *
+     * @relation function getTime(isNanoseconds?: boolean): number
      */
     @!APILevel[
         21,
-        deprecated: 21,
         stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
-    public static func getCurrentTime(isNano!: Bool = false): Int64 {
-        let cValue = unsafe { FfiOHOSSysDateTimegetCurrentTime(isNano) }
+    public static func getTime(isNanoseconds!: Bool = false): Int64 {
+        let cValue = unsafe { FfiOHOSSysDateTimeGetTime(isNanoseconds) }
         throwIfNotSuccess(cValue.code)
         return cValue.data
     }
 
     /**
-     *  @brief getRealActiveTime(isNano?: boolean): Promise<number>
+     * Obtains the number of milliseconds since the system has been running.
+     *
+     * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;
+     *     3. Parameter verification failed. This error code was added due to missing issues.
+     * @relation function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
      */
     @!APILevel[
         21,
-        deprecated: 21,
         stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
-    public static func getRealActiveTime(isNano!: Bool = false): Int64 {
-        let cValue = unsafe { FfiOHOSSysDateTimegetRealActiveTime(isNano) }
+    public static func getUptime(timeType: TimeType, isNanoseconds!: Bool = false): Int64 {
+        let cValue = unsafe { FfiOHOSSysDateTimeGetUptime(timeType.getValue(), isNanoseconds) }
         throwIfNotSuccess(cValue.code)
         return cValue.data
     }
 
     /**
-     *  @brief getRealTime(isNano?: boolean): Promise<number>
+     * Obtains the number of milliseconds since the system has been running.
+     *
+     * @relation function getTimezoneSync(): string
      */
     @!APILevel[
         21,
-        deprecated: 21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.MiscServices.Time"
-    ]
-    public static func getRealTime(isNano!: Bool = false): Int64 {
-        let cValue = unsafe { FfiOHOSSysDateTimegetRealTime(isNano) }
-        throwIfNotSuccess(cValue.code)
-        return cValue.data
-    }
-
-    /**
-     *  @brief getTime(isNanoseconds?: boolean): number
-     */
-    @!APILevel[
-        21,
-        crossplatform: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.MiscServices.Time"
-    ]
-    public static func getTime(isNano!: Bool = false): Int64 {
-        let cValue = unsafe { FfiOHOSSysDateTimeGetTime(isNano) }
-        throwIfNotSuccess(cValue.code)
-        return cValue.data
-    }
-
-    /**
-     *  @brief getUptime(timeType: TimeType, isNanoseconds?: boolean): number
-     */
-    @!APILevel[
-        21,
-        crossplatform: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.MiscServices.Time"
-    ]
-    public static func getUptime(timeType: TimeType, isNano!: Bool = false): Int64 {
-        let cValue = unsafe { FfiOHOSSysDateTimeGetUptime(timeType.getValue(), isNano) }
-        throwIfNotSuccess(cValue.code)
-        return cValue.data
-    }
-
-    /**
-     *  @brief getTimezone(callback: AsyncCallback<string>): void
-     */
-    @!APILevel[
-        21,
-        crossplatform: true,
         stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
