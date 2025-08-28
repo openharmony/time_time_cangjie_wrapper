@@ -38,7 +38,7 @@ public enum TimeType {
         stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
-    StartUp
+    Startup
     /**
      * Indicates the time elapsed since the system was booted, including deep sleep time.
      *
@@ -54,7 +54,7 @@ public enum TimeType {
 
     func getValue(): Int32 {
         match (this) {
-            case StartUp => 0
+            case Startup => 0
             case Active => 1
             case _ => throw IllegalArgumentException("The type is not supported.")
         }
