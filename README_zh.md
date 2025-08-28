@@ -45,7 +45,7 @@ base/time/time_cangjie_wrapper
 - 设置系统时区
 - 创建/开启/停止/销毁 定时器
 
-request相关API请参见[ohos.system_date_time（系统时间、时区）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-system_date_time.md)。
+时间时区相关API请参见[ohos.system_date_time（系统时间、时区）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-system_date_time.md)。
 
 ## 参与贡献
 

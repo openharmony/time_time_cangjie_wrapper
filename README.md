@@ -45,7 +45,7 @@ Compared with ArkTS, the following functions are temporarily not supported:
 - Set the system time zone 
 - Create/start/Stop/destroy timers
 
-For the request APIs, please refer to [ohos.system_date_time (System Time and Timezone)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-system_date_time.md).
+For the time manage APIs, please refer to [ohos.system_date_time (System Time and Timezone)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-system_date_time.md).
 
 ## Code Contribution
 
