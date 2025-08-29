@@ -26,6 +26,10 @@
     "ram":"88KB",
     "deps": {
       "components": [
+        "arkui_cangjie_wrapper",
+        "cangjie_ark_interop",
+        "hiviewdfx_cangjie_wrapper",
+        "time_service"
       ]
     },
     "build": {
