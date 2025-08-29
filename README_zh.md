@@ -2,7 +2,7 @@
 
 ## 简介
 
- 测试框架仓颉接口是在 OpenHarmony 上基于测试子系统能力之上封装的仓颉API。时间时区为OpenHarmony系统提供了管理系统时间时区和定时的能力，包括：
+时间时区仓颉接口是在 OpenHarmony 上基于测试子系统能力之上封装的仓颉API，当前开放的时间时区仓颉接口仅支持standard设备。时间时区仓颉接口为OpenHarmony系统提供了管理系统时间时区和定时的能力，包括：
 
 - **管理时间时区**
   统一管理系统时间时区，包括设置/获取系统时间、日期、时区，同时提供获取系统启动时间。
@@ -12,15 +12,11 @@
 
 ## 系统架构
 
-**图 1**  时间时区仓颉架构图
+**图 1**  时间时区仓颉接口架构图
 
 ![](figures/time_cangjie_wrapper_architecture.png "时间时区仓颉架构图")
 
 ## 目录
-
-时间时区仓颉源代码在/base/time目录下。
-
-目录结构如下所示：
 
 ```
 base/time/time_cangjie_wrapper
@@ -28,24 +24,20 @@ base/time/time_cangjie_wrapper
 ├── figures          # 存放readme中的架构图
 ```
 
-## 约束
-
-- 当前开放的管理系统时间仓颉接口仅支持standard设备。
-
 ## 使用说明
 
-提供以下管理时间功能：
+- 提供以下时间时区功能：
+  
+  - 获取自Unix纪元以来到当前系统时间所经过的时间
+  - 获取自系统启动以来经过的时间
+  - 获取系统时区
 
-- 获取自Unix纪元以来到当前系统时间所经过的时间
-- 获取自系统启动以来经过的时间
-- 获取系统时区
+- 与ArkTS相比，暂不支持以下功能：
+  
+  - 设置系统时区
+  - 创建/开启/停止/销毁 定时器
 
-与ArkTS相比，暂不支持以下功能：
-
-- 设置系统时区
-- 创建/开启/停止/销毁 定时器
-
-时间时区相关API请参见[ohos.system_date_time（系统时间、时区）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-system_date_time.md)。
+- 时间时区相关API请参见[ohos.system_date_time（系统时间、时区）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-system_date_time.md)。
 
 ## 参与贡献
 
@@ -53,4 +45,11 @@ base/time/time_cangjie_wrapper
 
 ## 相关仓
 
-[time_service](https://gitee.com/openharmony/time_time_service/blob/master/README_zh.md)
+[time_service](https://gitee.com/openharmony/time_time_service/blob/master/README_zh.md)  
+[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/tree/master)  
+[arkui_arkui_cangjie_wrapper](https://gitcode.com/openharmony-sig/arkui_arkui_cangjie_wrapper/tree/master)  
+[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/tree/master)  
+
+
+
+
