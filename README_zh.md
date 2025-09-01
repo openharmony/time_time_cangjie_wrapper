@@ -59,7 +59,4 @@ base/request/request_cangjie_wrapper
 
 ## 相关仓
 
-[time_service](https://gitee.com/openharmony/time_time_service/blob/master/README_zh.md)  
-[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/tree/master)  
-[arkui_arkui_cangjie_wrapper](https://gitcode.com/openharmony-sig/arkui_arkui_cangjie_wrapper/tree/master)  
-[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/tree/master)  
+[time_service](https://gitee.com/openharmony/time_time_service/blob/master/README_zh.md)   
