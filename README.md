@@ -32,6 +32,7 @@ As depicted in the architecture diagram:
 base/request/request_cangjie_wrapper
 ├── ohos             
       └── system_date_time    # Cangjie Time and Time Zone Subsystem code
+├── test                      # test code
 └── figures                   # architecture pictures
 ```
 
