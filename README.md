@@ -5,9 +5,11 @@
  The time_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the time and time zone subsystem. The time and time zone subsystem provides OpenHarmony with the capability of managing the system time, time zone, and timing.
 
 - **Time and time zone management**
+
   Manages the system time and time zone in a unified manner, including setting and obtaining the system time, date, and time zone, and obtaining the system startup time.
 
 - **Timing management**
+
   Provides the system timer capability, including creating, starting, stopping, and destroying timers. There are three types of timers: system startup timer, system time timer, and wakeup timer.
 
 The current time and time zone Cangjie interface supports standard devices and only provides the ability to obtain the time and time zone.
@@ -30,10 +32,10 @@ As depicted in the architecture diagram:
 
 ```
 base/request/request_cangjie_wrapper
-├── ohos             
-      └── system_date_time    # Cangjie Time and Time Zone Subsystem code
-├── test                      # test code
-└── figures                   # architecture pictures
+├── figures                   # architecture pictures             
+├── ohos
+    └── system_date_time      # Cangjie Time and Time Zone Subsystem code
+└── test                      # test code
 ```
 
 ## Instructions For Use
