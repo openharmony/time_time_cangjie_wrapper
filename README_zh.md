@@ -5,9 +5,11 @@
 时间时区仓颉接口是在 OpenHarmony 上基于时间时区子系统能力之上封装的仓颉API。时间时区子系统为OpenHarmony系统提供了管理系统时间时区和定时的能力，包括：
 
 - **管理时间时区**
+
   统一管理系统时间时区，包括设置/获取系统时间、日期、时区，同时提供获取系统启动时间。
 
 - **定时能力**
+
   提供系统定时器能力。包括定时器创建、启动、停止和销毁。定时器类型提供三种：系统启动时间计时类定时器、系统当前时间计时类定时器、唤醒类定时器。
 
 当前时间时区仓颉接口支持standard设备，只提供获取时间时区的能力。
@@ -30,10 +32,10 @@
 
 ```
 base/request/request_cangjie_wrapper
-├── ohos             
-      └── system_date_time    # 仓颉时间时区接口实现
-├── test                      # 测试代码
-└── figures                   # 存放README中的架构图
+├── figures                   # 存放README中的架构图             
+├── ohos
+    └── system_date_time      # 仓颉时间时区接口实现
+└── test                      # 测试代码
 ```
 
 ## 使用说明
@@ -57,7 +59,4 @@ base/request/request_cangjie_wrapper
 
 ## 相关仓
 
-[time_service](https://gitee.com/openharmony/time_time_service/blob/master/README_zh.md)  
-[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/tree/master)  
-[arkui_arkui_cangjie_wrapper](https://gitcode.com/openharmony-sig/arkui_arkui_cangjie_wrapper/tree/master)  
-[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/tree/master)  
+[time_service](https://gitee.com/openharmony/time_time_service/blob/master/README_zh.md)   
