@@ -56,7 +56,7 @@ class Test_system_date_time {
     public func test_getUptime_STARTUP() {
         Hilog.info(0, "SystemDateTime Test", "SystemDateTime::getUptime")
         try {
-            SystemDateTime.getUptime(TimeType.StartUp)
+            SystemDateTime.getUptime(TimeType.Startup)
             @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
