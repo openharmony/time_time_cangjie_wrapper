@@ -29,11 +29,13 @@ As depicted in the architecture diagram:
 ## Directory Structure
 
 ```
-base/request/request_cangjie_wrapper
-├── figures                   # architecture pictures   
+base/time/time_cangjie_wrapper
+├── figures                     # architecture pictures 
 ├── ohos
-    └── system_date_time      # Cangjie Time and Time Zone Subsystem code
-└── test                      # test code
+│   └── system_date_time        # Cangjie Time and Time Zone Subsystem code
+└── test
+    └── APILevel22
+        └── system_date_time    # Cangjie Time and Time Zone Subsystem test code
 ```
 
 ## Instructions For Use
@@ -44,12 +46,12 @@ base/request/request_cangjie_wrapper
   - Get the time elapsed since the system startup
   - Get the system time zone
 
-- Compared with ArkTS, the following functions are temporarily not supported:
+- Compared with the API capabilities provided by ArkTS, the following functions are temporarily not supported:
   
   - Set the system time zone
   - Create/start/Stop/destroy timers
 
-- For the time manage APIs, please refer to [ohos.system_date_time (System Time and Timezone)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-system_date_time.md).
+- For the time manage APIs, please refer to [time and time zone API reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-system_date_time.md).
 
 ## Code Contribution
 
