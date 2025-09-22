@@ -29,11 +29,13 @@
 ## 目录
 
 ```
-base/request/request_cangjie_wrapper
-├── figures                   # 存放README中的架构图         
+base/time/time_cangjie_wrapper
+├── figures                     # 存放README中的架构图
 ├── ohos
-    └── system_date_time      # 仓颉时间时区接口实现
-└── test                      # 测试代码
+│   └── system_date_time        # 仓颉时间时区接口实现
+└── test
+    └── APILevel22
+        └── system_date_time    # 仓颉时间时区接口测试代码
 ```
 
 ## 使用说明
@@ -44,12 +46,12 @@ base/request/request_cangjie_wrapper
   - 获取自系统启动以来经过的时间
   - 获取系统时区
 
-- 与ArkTS API相比，暂不支持以下功能：
+- 与ArkTS提供的API能力相比，暂不支持以下功能：
   
   - 设置系统时区
   - 创建/开启/停止/销毁 定时器
 
-- 时间时区相关API请参见[ohos.system_date_time（系统时间、时区）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-system_date_time.md)。
+- 时间时区相关API请参见[时间时区API参考](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-system_date_time.md)。
 
 ## 参与贡献
 
