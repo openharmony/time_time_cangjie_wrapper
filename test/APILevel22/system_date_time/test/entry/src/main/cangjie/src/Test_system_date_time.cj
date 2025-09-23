@@ -26,7 +26,7 @@ import ohos.hilog.Hilog
 @Test
 class Test_system_date_time {
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func test_getTime() {
         Hilog.info(0, "SystemDateTime Test", "SystemDateTime::getTime")
         try {
@@ -39,7 +39,7 @@ class Test_system_date_time {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func test_getUptime_ACTIVE() {
         Hilog.info(0, "SystemDateTime Test", "SystemDateTime::getUptime")
         try {
@@ -52,7 +52,7 @@ class Test_system_date_time {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func test_getUptime_STARTUP() {
         Hilog.info(0, "SystemDateTime Test", "SystemDateTime::getUptime")
         try {
@@ -65,7 +65,7 @@ class Test_system_date_time {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTimezone(): Unit {
         try {
             let stream = SystemDateTime.getTimezone()
@@ -77,7 +77,7 @@ class Test_system_date_time {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_init() {
         SystemDateTime()
         @Expect(true)
