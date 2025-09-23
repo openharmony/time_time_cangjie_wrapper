@@ -23,8 +23,7 @@ import ohos.labels.APILevel
  * @relation enum TimeType
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "21",
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public enum TimeType {
@@ -34,8 +33,7 @@ public enum TimeType {
      * @relation STARTUP = 0
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "21",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     Startup
@@ -45,8 +43,7 @@ public enum TimeType {
      * @relation ACTIVE = 1
      */
     | @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "21",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     Active
