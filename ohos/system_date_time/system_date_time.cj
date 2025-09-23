@@ -42,8 +42,7 @@ foreign {
  * @relation declare namespace systemDateTime
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    since: "21",
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public class SystemDateTime {
@@ -53,8 +52,7 @@ public class SystemDateTime {
      * @relation function getTime(isNanoseconds?: boolean): number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "21",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getTime(isNanoseconds!: Bool = false): Int64 {
@@ -71,8 +69,7 @@ public class SystemDateTime {
      * @relation function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "21",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getUptime(timeType: TimeType, isNanoseconds!: Bool = false): Int64 {
@@ -87,8 +84,7 @@ public class SystemDateTime {
      * @relation function getTimezoneSync(): string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        since: "21",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getTimezone(): String {
