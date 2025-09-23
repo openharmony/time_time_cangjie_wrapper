@@ -23,7 +23,9 @@ As depicted in the architecture diagram:
 - get time since system startup: Provides an interface to obtain the elapsed time since system startup.
 - get system time zone: Provides an interface to obtain the current system timezone.
 - Cangjie timing and time FFI interface definition: Responsible for defining the C language interoperability interface called by the Cangjie language, used to implement Cangjie's time zone capabilities.
-- timing and time service: Responsible for providing basic timezone functionality, encapsulating C  language interfaces for Cangjie interoperability.
+- time_service: Responsible for providing basic timezone functionality, encapsulating C  language interfaces for Cangjie interoperability.
+- cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for labeling APIs, and providing the BusinessException class definition thrown to users.
+- hiviewdfx_cangjie_wrapper: Responsible for providing log interfaces for printing logs at key paths.
 
 ## Directory Structure
 
@@ -33,8 +35,7 @@ base/time/time_cangjie_wrapper
 ├── ohos
 │   └── system_date_time        # Cangjie Time and Time Zone Subsystem code
 └── test
-    └── APILevel22
-        └── system_date_time    # Cangjie Time and Time Zone Subsystem test code
+    └── system_date_time        # Cangjie Time and Time Zone Subsystem test code
 ```
 
 ## Instructions For Use
@@ -44,10 +45,12 @@ base/time/time_cangjie_wrapper
   - Get the time elapsed from the Unix era to the current system time
   - Get the time elapsed since the system startup
   - Get the system time zone
+
 - Compared with the API capabilities provided by ArkTS, the following functions are temporarily not supported:
   
   - Set the system time zone
   - Create/start/Stop/destroy timers
+
 - For the time manage APIs, please refer to [time and time zone API reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-system_date_time.md).
 
 ## Code Contribution
@@ -61,4 +64,3 @@ Developers are welcome to contribute code, documentation, etc. For specific cont
 [cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README.md)
 
 [hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README.md)
-
