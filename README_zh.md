@@ -24,7 +24,9 @@
 - 获取系统启动时间：提供获取自系统启动以来经过时间的接口。
 - 获取系统时区：提供获取当前系统时区的接口。
 - 仓颉时间时区FFI接口定义：负责定义被仓颉语言调用的C语言互操作接口，用于实现仓颉时间时区能力。
-- 时间时区服务：负责提供时间时区基础功能，封装C语言接口提供给仓颉进行互操作。
+- time_service：负责提供时间时区基础功能，封装C语言接口提供给仓颉进行互操作。
+- cangjie_ark_interop：负责提供仓颉注解类定义，用于对API进行标注，以及提供抛向用户的BusinessException异常类定义。
+- hiviewdfx_cangjie_wrapper：负责提供日志接口，用于在关键路径处打印日志。
 
 ## 目录
 
@@ -34,8 +36,7 @@ base/time/time_cangjie_wrapper
 ├── ohos
 │   └── system_date_time        # 仓颉时间时区接口实现
 └── test
-    └── APILevel22
-        └── system_date_time    # 仓颉时间时区接口测试代码
+    └── system_date_time        # 仓颉时间时区接口测试代码
 ```
 
 ## 使用说明
