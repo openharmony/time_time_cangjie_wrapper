@@ -31,9 +31,8 @@ Framework Layer
 - Get Unix Epoch Time Function Encapsulation: Based on the ability to get Unix epoch time provided by the underlying time zone component, implements the function of getting Unix epoch time in Cangjie.
 - Get System Boot Time Function Encapsulation: Based on the ability to get system boot time provided by the underlying time zone component, implements the function of getting system boot time in Cangjie.
 - Get System Time Zone Function Encapsulation: Based on the ability to get system time zone provided by the underlying time zone component, implements the function of getting system time zone in Cangjie.
-- 
 
-Dependency Component Introduction in Architecture Diagram:
+Dependency Component Introduction in Architecture Diagram
 
 - time_service: Responsible for providing basic time zone functionality, encapsulating C language interfaces for interoperability with Cangjie.
 - cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for API annotation, and providing BusinessException exception class definitions thrown to users.
