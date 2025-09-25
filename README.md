@@ -31,7 +31,7 @@ Framework Layer
 - Get Unix Epoch Time Function Encapsulation: Based on the ability to get Unix epoch time provided by the underlying time zone component, implements the function of getting Unix epoch time in Cangjie.
 - Get System Boot Time Function Encapsulation: Based on the ability to get system boot time provided by the underlying time zone component, implements the function of getting system boot time in Cangjie.
 - Get System Time Zone Function Encapsulation: Based on the ability to get system time zone provided by the underlying time zone component, implements the function of getting system time zone in Cangjie.
-- Cangjie Time Zone FFI Interface Definition: Responsible for defining C language interoperability interfaces called by the Cangjie language to implement Cangjie time zone capabilities.
+- 
 
 Dependency Component Introduction in Architecture Diagram:
 
