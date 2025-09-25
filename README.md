@@ -1,66 +1,89 @@
-# time_cangjie_wrapper
+# Time Zone Cangjie Interface
 
 ## Introduction
 
-The time_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the time and time zone subsystem. The time and time zone subsystem provides OpenHarmony with the capability of managing the system time, time zone, and timing.
+The Time Zone Cangjie Interface is a Cangjie API provided by the time zone subsystem of OpenHarmony that offers time and time zone related capabilities. The time zone subsystem provides OpenHarmony system with the ability to manage system time, time zones, and timing, including:
 
-- **Time and time zone management**
-  Manages the system time and time zone in a unified manner, including setting and obtaining the system time, date, and time zone, and obtaining the system startup time.
-- **Timing management**
-  Provides the system timer capability, including creating, starting, stopping, and destroying timers. There are three types of timers: system startup timer, system time timer, and wakeup timer.
+- **Time Zone Management**
+  Unified management of system time and time zones, including setting/getting system time, date, time zone, and providing system boot time.
 
-The current time and time zone Cangjie interface supports standard devices and only provides the ability to obtain the time and time zone.
+- **Timing Capabilities**
+  Provides system timer capabilities, including timer creation, start, stop, and destruction. Three types of timers are provided: system boot time-based timer, system current time-based timer, and wake-up timer.
+
+The current Time Zone Cangjie Interface supports standard devices and only provides the ability to get time and time zone information.
 
 ## System Architecture
 
-**Figure 1** Architecture of the time_cangjie_wrapper
+**Figure 1** Time Zone Cangjie Interface Architecture Diagram
 
 !["Architecture of the time_cangjie_wrapper"](figures/time_cangjie_wrapper_architecture_en.png )
 
-As depicted in the architecture diagram:
+As shown in the architecture diagram:
 
-- get  time since the Unix epoch: Provides an interface to obtain the elapsed time since the Unix epoch.
-- get time since system startup: Provides an interface to obtain the elapsed time since system startup.
-- get system time zone: Provides an interface to obtain the current system timezone.
-- Cangjie timing and time FFI interface definition: Responsible for defining the C language interoperability interface called by the Cangjie language, used to implement Cangjie's time zone capabilities.
-- time_service: Responsible for providing basic timezone functionality, encapsulating C  language interfaces for Cangjie interoperability.
-- cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for labeling APIs, and providing the BusinessException class definition thrown to users.
-- hiviewdfx_cangjie_wrapper: Responsible for providing log interfaces for printing logs at key paths.
+Interface Layer
+
+* Get Unix Epoch Time: Provides an interface to get the elapsed time since the Unix epoch.
+* Get System Boot Time: Provides an interface to get the elapsed time since system boot.
+* Get System Time Zone: Provides an interface to get the current system time zone.
+
+Framework Layer
+
+- Encapsulates and adapts the underlying task capabilities, providing standardized functional support for the interface layer, including:
+  
+  * Get Unix Epoch Time Function Encapsulation
+  
+  * Get System Boot Time Function Encapsulation
+  
+  * Get System Time Zone Function Encapsulation
+
+- Cangjie Time Zone FFI Interface Definition: Responsible for defining C language interoperability interfaces called by the Cangjie language to implement Cangjie time zone capabilities.
+
+- time_service: Responsible for providing basic time zone functions, encapsulating C language interfaces for Cangjie interoperability.
+
+- cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for API annotation, and providing BusinessException exception class definitions thrown to users.
+
+- hiviewdfx_cangjie_wrapper: Responsible for providing log interfaces for printing logs at critical paths.
 
 ## Directory Structure
 
 ```
 base/time/time_cangjie_wrapper
-├── figures                     # architecture pictures 
+├── figures                     # Stores architecture diagrams in README
 ├── ohos
-│   └── system_date_time        # Cangjie Time and Time Zone Subsystem code
+│   └── system_date_time        # Cangjie time zone interface implementation
 └── test
-    └── system_date_time        # Cangjie Time and Time Zone Subsystem test code
+    └── system_date_time        # Cangjie time zone interface test code
 ```
 
-## Instructions For Use
+## Usage Instructions
 
-- The following time manage functions are provided:
-  
-  - Get the time elapsed from the Unix era to the current system time
-  - Get the time elapsed since the system startup
-  - Get the system time zone
+Provides the following time and time zone functions:
 
-- Compared with the API capabilities provided by ArkTS, the following functions are temporarily not supported:
-  
-  - Set the system time zone
-  - Create/start/Stop/destroy timers
+- Get the elapsed time from Unix epoch to current system time
+- Get the elapsed time since system boot
+- Get system time zone
 
-- For the time manage APIs, please refer to [time and time zone API reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-system_date_time.md).
+For time and time zone related APIs, please refer to [Time Zone API Reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-system_date_time.md).
 
-## Code Contribution
+## Constraints
+
+Compared to the API capabilities provided by ArkTS, the following functions are not currently supported:
+
+- Setting system time zone
+- Creating/starting/stopping/destroying timers
+
+## Contributing
 
 Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Code Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/code-contribution.md).
 
-## Repositories Involved
+## Related Repositories
 
 [time_service](https://gitee.com/openharmony/time_time_service/blob/master/README.md)
 
 [cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README.md)
 
 [hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README.md)
+
+
+
+
