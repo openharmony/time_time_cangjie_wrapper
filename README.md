@@ -64,6 +64,7 @@ For time zone-related APIs, please refer to [Time Zone API Reference](https://gi
 
 Compared to APIs provided by ArkTS, the following functions are not currently supported:
 
+- Setting system time
 - Setting system time zone
 - Creating/starting/stopping/destroying timers
 

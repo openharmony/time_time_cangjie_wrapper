@@ -63,6 +63,7 @@ base/time/time_cangjie_wrapper
 
 与 ArkTS 提供的API能力相比，暂不支持以下功能：
 
+- 设置系统时间
 - 设置系统时区
 - 创建/开启/停止/销毁 定时器
 
