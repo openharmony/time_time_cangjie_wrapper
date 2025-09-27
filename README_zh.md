@@ -2,29 +2,25 @@
 
 ## 简介
 
-时间时区仓颉封装是 OpenHarmony 上面向开发者提供使用仓颉语言进行应用开发时的时间时区相关能力。时间时区子系统为 OpenHarmony 系统提供了管理系统时间时区和定时的能力。
-
-当前时间时区仓颉封装支持standard设备，只提供获取时间时区的能力。
+时间时区仓颉封装是 OpenHarmony 上面向开发者提供使用仓颉语言进行应用开发时的时间时区相关能力，为 OpenHarmony 系统提供了管理系统时间时区和定时的能力，且仅支持standard设备。
 
 ## 系统架构
 
-**图 1**  时间时区仓颉架构图
+**图 1**  时间时区仓颉封装架构图
 
 ![时间时区仓颉架构](figures/time_cangjie_wrapper_architecture.png)
 
-如架构图所示：
-
 接口层：
 
-- 时间时区部件API：提供系统时间和系统时区功能。开发者可以获取系统时间及系统时区。
+- 时间时区功能接口：提供系统时间和系统时区功能。开发者可以获取系统时间及系统时区。
 
 框架层：
 
-- 时间时区部件封装：该封装层是对获取系统时间及系统时区能力进行仓颉封装实现。
+- 时间时区功能封装：该封装层是对获取系统时间及系统时区能力进行仓颉封装实现。
 
 架构图中的依赖部件引入说明：
 
-- time_service：负责提供时间时区基础功能，封装C语言接口提供给仓颉进行互操作。
+- time_service：负责提供时间时区基础功能。
 - cangjie_ark_interop：负责提供仓颉注解类定义，用于对API进行标注，以及提供抛向用户的BusinessException异常类定义。
 - hiviewdfx_cangjie_wrapper：负责提供日志接口，用于在关键路径处打印日志。
 
@@ -47,7 +43,7 @@ base/time/time_cangjie_wrapper
 - 获取自系统启动以来经过的时间
 - 获取系统时区
 
-时间时区相关API请参见[时间时区API参考](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-system_date_time.md)。
+时间时区相关API请参见[时间时区API参考](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-system_date_time.md)，相关指南请参见[时间时区指南](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_zh_cn/system_date_time/cj-system_data_time.md) 。
 
 ## 约束
 
