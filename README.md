@@ -2,15 +2,7 @@
 
 ## Introduction
 
-The Time Zone Cangjie Wrapper provides time zone-related capabilities for developers using the Cangjie language for application development on OpenHarmony. The time zone subsystem provides the OpenHarmony system with the ability to manage system time zones and timing, including:
-
-- **Time Zone Management**
-  Unified management of system time zones, including setting/getting system time, date, time zone, while providing system boot time acquisition.
-
-- **Timing Capabilities**
-  Provides system timer capabilities. Includes timer creation, start, stop, and destruction. Three types of timers are provided: system boot time timing timers, system current time timing timers, and wake-up timers.
-
-The current time zone Cangjie wrapper supports standard devices and only provides the ability to obtain time zone information.
+The Time Zone Cangjie Wrapper provides time zone-related capabilities for developers using the Cangjie language for application development on OpenHarmony. The Time Zone Cangjie Wrapper provides the ability to obtain the system time zone and only supports standard devices.
 
 ## System Architecture
 
@@ -20,21 +12,17 @@ The current time zone Cangjie wrapper supports standard devices and only provide
 
 As shown in the architecture diagram:
 
-Interface Layer
+Interface Layer:
 
-- Get Unix Epoch Time: Provides developers with the ability to obtain time elapsed since the Unix epoch.
-- Get System Boot Time: Provides developers with the ability to obtain time elapsed since system boot.
-- Get System Time Zone: Provides developers with the ability to obtain the current system time zone.
+- Time Zone Function Interface: Provides system time and system time zone functions. Developers can obtain the system time and time zone.
 
-Framework Layer
+Framework Layer:
 
-- Get Unix Epoch Time Function Encapsulation: Based on the ability to get Unix epoch time provided by the underlying time zone component, implements the function of getting Unix epoch time in Cangjie.
-- Get System Boot Time Function Encapsulation: Based on the ability to get system boot time provided by the underlying time zone component, implements the function of getting system boot time in Cangjie.
-- Get System Time Zone Function Encapsulation: Based on the ability to get system time zone provided by the underlying time zone component, implements the function of getting system time zone in Cangjie.
+- -Time zone function encapsulation: This encapsulation layer is a Cangjie encapsulation implementation for obtaining system time and system time zone capabilities.
 
 Dependency Component Introduction in Architecture Diagram
 
-- time_service: Responsible for providing basic time zone functionality, encapsulating C language interfaces for interoperability with Cangjie.
+- time_service: Responsible for providing basic time zone functions.
 - cangjie_ark_interop: Responsible for providing Cangjie annotation class definitions for API annotation, and providing BusinessException exception class definitions thrown to users.
 - hiviewdfx_cangjie_wrapper: Responsible for providing log interfaces for printing logs at critical paths.
 
@@ -58,6 +46,7 @@ Provides the following time zone functions:
 - Get system time zone
 
 For time zone-related APIs, please refer to [Time Zone API Reference](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-system_date_time.md).
+For relevant guidelines, please refer to the [Time Zone Guide](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_en/system_date_time/cj-system_data_time.md).
 
 ## Constraints
 
