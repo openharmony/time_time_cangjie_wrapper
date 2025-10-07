@@ -1,4 +1,4 @@
-# Time Zone Cangjie Wrapper
+# Time Zone Cangjie Wrapper(beta feature)
 
 ## Introduction
 
