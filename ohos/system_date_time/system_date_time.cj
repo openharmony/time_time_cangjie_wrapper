@@ -40,23 +40,17 @@ foreign {
 
 /**
  * System time and timezone.
- *
- * @relation declare namespace systemDateTime
  */
 @!APILevel[
     21,
-    stagemodelonly: true,
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public class SystemDateTime {
     /**
      * Obtains the number of timestamp that have elapsed since the Unix epoch.
-     *
-     * @relation function getTime(isNanoseconds?: boolean): number
      */
     @!APILevel[
         21,
-        stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getTime(isNanoseconds!: Bool = false): Int64 {
@@ -70,11 +64,9 @@ public class SystemDateTime {
      *
      * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;
      *     3. Parameter verification failed. This error code was added due to missing issues.
-     * @relation function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
      */
     @!APILevel[
         21,
-        stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getUptime(timeType: TimeType, isNanoseconds!: Bool = false): Int64 {
@@ -85,12 +77,9 @@ public class SystemDateTime {
 
     /**
      * Obtains the number of milliseconds since the system has been running.
-     *
-     * @relation function getTimezoneSync(): string
      */
     @!APILevel[
         21,
-        stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getTimezone(): String {
