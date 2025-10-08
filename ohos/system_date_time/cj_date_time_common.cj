@@ -21,34 +21,25 @@ import ohos.labels.APILevel
 
 /**
  * Indicates time type.
- *
- * @relation enum TimeType
  */
 @!APILevel[
     21,
-    stagemodelonly: true,
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public enum TimeType {
     /**
      * Indicates the time elapsed since the system was booted, including deep sleep time.
-     *
-     * @relation STARTUP = 0
      */
     @!APILevel[
         21,
-        stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
     Startup
     /**
      * Indicates the time elapsed since the system was booted, including deep sleep time.
-     *
-     * @relation ACTIVE = 1
      */
     | @!APILevel[
         21,
-        stagemodelonly: true,
         syscap: "SystemCapability.MiscServices.Time"
     ]
     Active
