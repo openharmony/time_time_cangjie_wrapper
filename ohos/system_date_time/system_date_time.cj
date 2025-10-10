@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
+
 package ohos.system_date_time
 
 import ohos.ffi.{ RetCode, RetDataCString, RetDataI64 }
@@ -38,8 +40,6 @@ foreign {
 
 /**
  * System time and timezone.
- *
- * @relation declare namespace systemDateTime
  */
 @!APILevel[
     since: "22",
@@ -48,8 +48,6 @@ foreign {
 public class SystemDateTime {
     /**
      * Obtains the number of timestamp that have elapsed since the Unix epoch.
-     *
-     * @relation function getTime(isNanoseconds?: boolean): number
      */
     @!APILevel[
         since: "22",
@@ -66,7 +64,6 @@ public class SystemDateTime {
      *
      * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;
      *     3. Parameter verification failed. This error code was added due to missing issues.
-     * @relation function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
      */
     @!APILevel[
         since: "22",
@@ -80,8 +77,6 @@ public class SystemDateTime {
 
     /**
      * Obtains the number of milliseconds since the system has been running.
-     *
-     * @relation function getTimezoneSync(): string
      */
     @!APILevel[
         since: "22",

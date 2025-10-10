@@ -13,14 +13,14 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
+
 package ohos.system_date_time
 
 import ohos.labels.APILevel
 
 /**
  * Indicates time type.
- *
- * @relation enum TimeType
  */
 @!APILevel[
     since: "22",
@@ -29,8 +29,6 @@ import ohos.labels.APILevel
 public enum TimeType {
     /**
      * Indicates the time elapsed since the system was booted, including deep sleep time.
-     *
-     * @relation STARTUP = 0
      */
     @!APILevel[
         since: "22",
@@ -39,8 +37,6 @@ public enum TimeType {
     Startup
     /**
      * Indicates the time elapsed since the system was booted, including deep sleep time.
-     *
-     * @relation ACTIVE = 1
      */
     | @!APILevel[
         since: "22",
