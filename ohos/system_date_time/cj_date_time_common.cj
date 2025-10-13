@@ -18,9 +18,11 @@
 package ohos.system_date_time
 
 import ohos.labels.APILevel
+import ohos.business_exception.BusinessException
 
 /**
  * Indicates time type.
+ *
  */
 @!APILevel[
     21,
@@ -29,6 +31,7 @@ import ohos.labels.APILevel
 public enum TimeType {
     /**
      * Indicates the time elapsed since the system was booted, including deep sleep time.
+     *
      */
     @!APILevel[
         21,
@@ -37,6 +40,7 @@ public enum TimeType {
     Startup
     /**
      * Indicates the time elapsed since the system was booted, including deep sleep time.
+     *
      */
     | @!APILevel[
         21,
@@ -49,7 +53,7 @@ public enum TimeType {
         match (this) {
             case Startup => 0
             case Active => 1
-            case _ => throw IllegalArgumentException("The type is not supported.")
+            case _ => throw BusinessException(401, "Parameter error.")
         }
     }
 }
