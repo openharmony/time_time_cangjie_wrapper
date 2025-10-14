@@ -40,6 +40,7 @@ foreign {
 
 /**
  * System time and timezone.
+ *
  */
 @!APILevel[
     since: "22",
@@ -48,6 +49,10 @@ foreign {
 public class SystemDateTime {
     /**
      * Obtains the number of timestamp that have elapsed since the Unix epoch.
+     *
+     * @param { Bool } isNanoseconds - True if the result is in nanoseconds, otherwise in milliseconds.
+     * @returns { Int64 } The timestamp returned of getTime.
+     * @throws { BusinessException } 16000050 - Internal error.
      */
     @!APILevel[
         since: "22",
@@ -62,7 +67,11 @@ public class SystemDateTime {
     /**
      * Obtains the number of milliseconds since the system has been running.
      *
-     * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;
+     * @param { TimeType } timeType - Indicates time type.
+     * @param { Bool } isNanoseconds - True if the result is in nanoseconds, otherwise in milliseconds.
+     * @returns { Int64 } The number of milliseconds since the system has been running.
+     * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left
+     * unspecified; 2. Incorrect parameter types;
      *     3. Parameter verification failed. This error code was added due to missing issues.
      */
     @!APILevel[
@@ -76,7 +85,10 @@ public class SystemDateTime {
     }
 
     /**
-     * Obtains the number of milliseconds since the system has been running.
+     * Obtains the system time zone.
+     *
+     * @returns { String } The timezone returned of getTimezone.
+     * @throws { BusinessException } 16000050 - Internal error.
      */
     @!APILevel[
         since: "22",
