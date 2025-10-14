@@ -35,7 +35,7 @@ func getErrorInfo(code: Int32): String {
 func throwIfNotSuccess(code: Int32): Unit {
     if (code != SUCCESS_CODE) {
         if (code == SYSTEM_ERROR) {
-            throw IllegalStateException("system error")
+            throw BusinessException(16000050, "Internal error.")
         }
         Hilog.error(SYSTEM_DATE_TIME_DOMAIN_ID, "Date-Time", getErrorInfo(code))
         throw BusinessException(code, getErrorInfo(code))
