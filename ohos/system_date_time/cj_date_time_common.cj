@@ -25,7 +25,7 @@ import ohos.business_exception.BusinessException
  *
  */
 @!APILevel[
-    21,
+    since: "22",
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public enum TimeType {
@@ -34,7 +34,7 @@ public enum TimeType {
      *
      */
     @!APILevel[
-        21,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     Startup
@@ -43,7 +43,7 @@ public enum TimeType {
      *
      */
     | @!APILevel[
-        21,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     Active

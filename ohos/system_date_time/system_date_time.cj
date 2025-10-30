@@ -43,7 +43,7 @@ foreign {
  *
  */
 @!APILevel[
-    21,
+    since: "22",
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public class SystemDateTime {
@@ -55,7 +55,7 @@ public class SystemDateTime {
      * @throws { BusinessException } 16000050 - Internal error.
      */
     @!APILevel[
-        21,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getTime(isNanoseconds!: Bool = false): Int64 {
@@ -75,7 +75,7 @@ public class SystemDateTime {
      *     3. Parameter verification failed. This error code was added due to missing issues.
      */
     @!APILevel[
-        21,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getUptime(timeType: TimeType, isNanoseconds!: Bool = false): Int64 {
@@ -91,7 +91,7 @@ public class SystemDateTime {
      * @throws { BusinessException } 16000050 - Internal error.
      */
     @!APILevel[
-        21,
+        since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     public static func getTimezone(): String {
