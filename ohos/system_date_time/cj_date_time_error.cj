@@ -22,7 +22,6 @@ import ohos.ffi.SUCCESS_CODE
 import ohos.hilog.Hilog
 
 let SYSTEM_DATE_TIME_DOMAIN_ID: UInt32 = 0xD001C04
-const SYSTEM_ERROR: Int32 = -1
 
 func getErrorInfo(code: Int32): String {
     if (let Some(v) <- getUniversalErrorMsg(code)) {
@@ -34,7 +33,7 @@ func getErrorInfo(code: Int32): String {
 
 func throwIfNotSuccess(code: Int32): Unit {
     if (code != SUCCESS_CODE) {
-        if (code == SYSTEM_ERROR) {
+        if (code == -1) {
             throw BusinessException(16000050, "Internal error.")
         }
         Hilog.error(SYSTEM_DATE_TIME_DOMAIN_ID, "Date-Time", getErrorInfo(code))
