@@ -22,7 +22,6 @@ import ohos.business_exception.BusinessException
 
 /**
  * Indicates time type.
- *
  */
 @!APILevel[
     since: "22",
@@ -31,18 +30,17 @@ import ohos.business_exception.BusinessException
 public enum TimeType {
     /**
      * Indicates the time elapsed since the system was booted, including deep sleep time.
-     *
      */
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
     Startup
+    |
     /**
-     * Indicates the time elapsed since the system was booted, including deep sleep time.
-     *
+     * Indicates the time elapsed since the system was booted, not including deep sleep time.
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.MiscServices.Time"
     ]
