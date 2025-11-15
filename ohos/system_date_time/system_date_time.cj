@@ -40,7 +40,6 @@ foreign {
 
 /**
  * System time and timezone.
- *
  */
 @!APILevel[
     since: "22",
@@ -50,13 +49,14 @@ public class SystemDateTime {
     /**
      * Obtains the number of timestamp that have elapsed since the Unix epoch.
      *
-     * @param { Bool } isNanoseconds - True if the result is in nanoseconds, otherwise in milliseconds.
+     * @param { Bool } [isNanoseconds] - True if the result is in nanoseconds, otherwise in milliseconds.
      * @returns { Int64 } The timestamp returned of getTime.
      * @throws { BusinessException } 16000050 - Internal error.
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.MiscServices.Time"
+        syscap: "SystemCapability.MiscServices.Time",
+        throwexception: true
     ]
     public static func getTime(isNanoseconds!: Bool = false): Int64 {
         let cValue = unsafe { FfiOHOSSysDateTimeGetTime(isNanoseconds) }
@@ -67,12 +67,9 @@ public class SystemDateTime {
     /**
      * Obtains the number of milliseconds since the system has been running.
      *
-     * @param { TimeType } timeType - Indicates time type.
-     * @param { Bool } isNanoseconds - True if the result is in nanoseconds, otherwise in milliseconds.
-     * @returns { Int64 } The number of milliseconds since the system has been running.
-     * @throws { BusinessException } 401 - Parameter error. Possible causes: 1. Mandatory parameters are left
-     * unspecified; 2. Incorrect parameter types;
-     *     3. Parameter verification failed. This error code was added due to missing issues.
+     * @param { TimeType } timeType - indicates the type of get uptime. It can only be `STARTUP` or `ACTIVE`.
+     * @param { Bool } [isNanoseconds] - True if the result is in nanoseconds, otherwise in milliseconds.
+     * @returns { Int64 } The timestamp returned of getUpTime.
      */
     @!APILevel[
         since: "22",
@@ -92,7 +89,8 @@ public class SystemDateTime {
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.MiscServices.Time"
+        syscap: "SystemCapability.MiscServices.Time",
+        throwexception: true
     ]
     public static func getTimezone(): String {
         let ret = unsafe { FfiOHOSSysGetTimezone() }
