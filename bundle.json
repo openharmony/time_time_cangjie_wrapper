@@ -12,9 +12,7 @@
   "component": {
     "name": "time_cangjie_wrapper",
     "subsystem": "time",
-    "syscap": [
-      "SystemCapability.MiscServices.Time"
-    ],
+    "syscap": [],
     "features": [
     ],
     "hisysevent_config": [
