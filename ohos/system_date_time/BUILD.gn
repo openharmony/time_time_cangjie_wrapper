@@ -16,11 +16,16 @@
 import("//build/templates/cangjie/cjc.gni")
 
 ohos_cangjie_shared_library("ohos.system_date_time") {
-  sources = [
-    "cj_date_time_common.cj",
-    "cj_date_time_error.cj",
-    "system_date_time.cj",
-  ]
+
+  if (is_mingw || is_mac){
+    sources = [ "../../mock/ohos.system_date_time.cj" ]
+  } else {
+    sources = [
+      "cj_date_time_common.cj",
+      "cj_date_time_error.cj",
+      "system_date_time.cj",
+    ]
+  }
 
   cj_external_deps = [
     "cangjie_ark_interop:ohos.business_exception",
