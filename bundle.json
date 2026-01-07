@@ -33,7 +33,7 @@
       "sub_component": [
           "//base/time/time_cangjie_wrapper/ohos/system_date_time:ohos.system_date_time"
       ],
-      "inner_api": [
+      "inner_kits": [
         {
           "name": "//base/time/time_cangjie_wrapper/ohos/system_date_time:ohos.system_date_time"
         },
