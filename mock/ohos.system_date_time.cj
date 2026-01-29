@@ -17,28 +17,51 @@ package ohos.system_date_time
 
 import ohos.labels.APILevel
 
-@!APILevel[since: "22", syscap: "SystemCapability.MiscServices.Time"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.MiscServices.Time"
+]
 public enum TimeType {
-    @!APILevel[since: "22", syscap: "SystemCapability.MiscServices.Time"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.MiscServices.Time"
+    ]
     Startup
-    | @!APILevel[since: "22", syscap: "SystemCapability.MiscServices.Time"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.MiscServices.Time"
+    ]
     Active
     | ...
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.MiscServices.Time"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.MiscServices.Time"
+]
 public class SystemDateTime {
-    @!APILevel[since: "22", syscap: "SystemCapability.MiscServices.Time"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.MiscServices.Time"
+    ]
     public static func getTime(isNanoseconds!: Bool = false): Int64 {
         return 0
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.MiscServices.Time"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.MiscServices.Time"
+    ]
     public static func getUptime(timeType: TimeType, isNanoseconds!: Bool = false): Int64 {
         return 0
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.MiscServices.Time", workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.MiscServices.Time",
+        workerthread: true
+    ]
     public static func getTimezone(): String {
         return String()
     }
