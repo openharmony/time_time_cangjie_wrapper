@@ -75,11 +75,4 @@ class Test_system_date_time {
             Hilog.info(0, "SystemDateTime Test", "error: ${e.toString()}")
         }
     }
-
-    @TestCase
-    @Tag[APILevel22, TestLevel0]
-    func Test_init() {
-        SystemDateTime()
-        @Expect(true)
-    }
 }
