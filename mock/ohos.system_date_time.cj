@@ -66,7 +66,7 @@ public class SystemDateTime {
         return String()
     }
     
-    public init() {
+    init() {
         super()
     }
 }

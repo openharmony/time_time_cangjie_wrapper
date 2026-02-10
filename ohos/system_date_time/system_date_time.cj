@@ -46,6 +46,7 @@ foreign {
     syscap: "SystemCapability.MiscServices.Time"
 ]
 public class SystemDateTime {
+    init() {}
     /**
      * Obtains the number of timestamp that have elapsed since the Unix epoch.
      *
